@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Bookmark Manager</h1>
+      <nav aria-label="Main navigation">
+        <a href="#all" id="all-link">All Bookmarks</a>
+        <a href="#add" id="add-link">Add Bookmark</a>
+      </nav>
+      <p id="message" role="status"></p>
+
+      <section id="all-view">
+        <h2>All Bookmarks</h2>
+        <p class="js-status" role="status"></p>
+        <div id="bookmark-list" class="js-items"></div>
+      </section>
+
+      <section id="add-view" hidden>
+        <h2 id="form-heading">Add Bookmark</h2>
+        <form id="bookmark-form">
+          <label for="title">Title</label>
+          <input id="title" required maxlength="160" />
+
+          <label for="url">URL</label>
+          <input
+            id="url"
+            type="url"
+            placeholder="https://example.com"
+            required
+          />
+
+          <label for="category">Category</label>
+          <select id="category">
+            <option>Reading</option>
+            <option>Tools</option>
+            <option>Design</option>
+            <option>Learning</option>
+          </select>
+
+          <button type="submit">Save Bookmark</button>
+          <a href="#all">Cancel</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
